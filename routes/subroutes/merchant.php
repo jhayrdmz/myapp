@@ -3,5 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::group(['as' => 'merchant.'], function () {
-    Route::get('/', 'HomeController');
+    // Route::group(['middleware' => 'auth:merchant'], function () {
+        Route::get('/', 'HomeController');
+    // });
 });
