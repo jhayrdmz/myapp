@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
 
-Route::group(['as' => 'admin.'], function () {
-    Route::get('/', 'HomeController');
-});
+// Route::group(['as' => 'admin.'], function () {
+//     Route::get('/', 'HomeController');
+// });

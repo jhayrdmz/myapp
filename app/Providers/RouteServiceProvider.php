@@ -35,17 +35,17 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::domain('admin.myapp.test')
                 ->middleware('web')
-                ->namespace('App\Http\Controllers\Admin')
+                ->namespace('App\Livewire\Admin')
                 ->group(base_path('routes/subroutes/admin.php'));
 
             Route::domain('merchant.myapp.test')
                 ->middleware('web')
-                ->namespace('App\Http\Controllers\Merchant')
+                ->namespace('App\Livewire\Merchant')
                 ->group(base_path('routes/subroutes/merchant.php'));
 
             Route::domain('pos.myapp.test')
                 ->middleware('web')
-                ->namespace('App\Http\Controllers\POS')
+                ->namespace('App\Livewire\POS')
                 ->group(base_path('routes/subroutes/pos.php'));
 
             Route::middleware('web')
