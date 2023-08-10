@@ -18,4 +18,13 @@ class Admin extends Model
         'password',
         'remember_token',
     ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'password' => 'hashed',
+    ];
 }

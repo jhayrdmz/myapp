@@ -29,5 +29,6 @@ class Merchant extends Authenticatable
     protected $casts = [
         'blocked_at' => 'datetime',
         'last_login_at' => 'datetime',
+        'password' => 'hashed',
     ];
 }

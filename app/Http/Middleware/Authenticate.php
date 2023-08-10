@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class Authenticate extends Middleware
 {
@@ -12,6 +13,12 @@ class Authenticate extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
+        $subdomain = Arr::first(explode('.', request()->getHost()));
+
+        if (in_array($subdomain, ['admin', 'merchant', 'pos'])) {
+            return route($subdomain . '.auth.login');
+        }
+
         return $request->expectsJson() ? null : route('login');
     }
 }

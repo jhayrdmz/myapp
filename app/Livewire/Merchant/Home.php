@@ -7,9 +7,9 @@ use Livewire\Component;
 
 class Home extends Component
 {
-    #[Title('Home')] 
     public function render()
     {
-        return view('livewire.merchant.home');
+        return view('merchant.livewire.home')
+            ->title('Home');
     }
 }
